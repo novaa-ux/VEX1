@@ -12,11 +12,11 @@
 <aside class="drawer" id="drawer"><button onclick="cartToggle()" style="float:right">CLOSE ✕</button><h2>YOUR BAG (<span id="cc">0</span>)</h2><div id="items"></div><h3 id="total"></h3><button class="cta" onclick="checkout()">ORDER VIA WHATSAPP</button><p style="font-size:10px;color:#888">Enter the store WhatsApp number when prompted. This is a static frontend demo.</p></aside><div class="toast" id="toast" hidden></div>
 <script>
 const P=[
-{id:'black',name:'VEX Core Compression Tee',color:'Black',cat:'Compressions',price:590,old:690,disc:14,stock:18,img:'images/black-front.jpg',desc:'A clean, athletic compression fit built for training and everyday movement.',best:1},
-{id:'burgundy',name:'VEX Core Compression Tee',color:'Burgundy',cat:'Compressions',price:590,old:690,disc:14,stock:9,img:'images/burgundy.jpg',desc:'Supportive stretch and a close fit in a deep burgundy finish.'},
-{id:'red',name:'VEX Core Compression Tee',color:'Crimson',cat:'Compressions',price:590,old:690,disc:14,stock:4,img:'images/red.jpg',desc:'A bold training essential with a streamlined athletic silhouette.'},
-{id:'white',name:'VEX Core Compression Tee',color:'White',cat:'Compressions',price:590,old:690,disc:14,stock:12,img:'images/white.jpg',desc:'Minimal, versatile performance wear with a second-skin fit.'},
-{id:'pants',name:'VEX Relaxed Track Pants',color:'Black',cat:'Bottoms',price:790,old:890,disc:11,stock:7,img:'images/pants.jpg',desc:'Relaxed straight-leg track pants designed for comfort before and after training.'}];
+{id:'black.jpeg',name:'VEX Core Compression Tee',color:'Black',cat:'Compressions',price:590,old:690,disc:14,stock:18,img:'images/black-front.jpg',desc:'A clean, athletic compression fit built for training and everyday movement.',best:1},
+{id:'burgundy.jpeg',name:'VEX Core Compression Tee',color:'Burgundy',cat:'Compressions',price:590,old:690,disc:14,stock:9,img:'images/burgundy.jpg',desc:'Supportive stretch and a close fit in a deep burgundy finish.'},
+{id:'red.jpeg',name:'VEX Core Compression Tee',color:'Crimson',cat:'Compressions',price:590,old:690,disc:14,stock:4,img:'images/red.jpg',desc:'A bold training essential with a streamlined athletic silhouette.'},
+{id:'white.jpeg',name:'VEX Core Compression Tee',color:'White',cat:'Compressions',price:590,old:690,disc:14,stock:12,img:'images/white.jpg',desc:'Minimal, versatile performance wear with a second-skin fit.'},
+{id:'pants.jpeg',name:'VEX Relaxed Track Pants',color:'Black',cat:'Bottoms',price:790,old:890,disc:11,stock:7,img:'images/pants.jpg',desc:'Relaxed straight-leg track pants designed for comfort before and after training.'}];
 let current=null,size='M',bag=[];
 const cash=n=>n.toLocaleString('en-EG')+' EGP';
 function card(p){return `<article class="card"><div class="pic" onclick="openProduct('${p.id}')"><img src="${p.img}">${p.best?'<span class="tag">BEST SELLER</span>':''}</div><div class="details"><div><h3>${p.name}</h3><p>${p.color} · ${p.cat}</p></div><div class="price"><b>${cash(p.price)}</b><del>${cash(p.old)}</del></div></div></article>`}
